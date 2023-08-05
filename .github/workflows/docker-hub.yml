@@ -91,7 +91,7 @@ jobs:
           var_end=$(($var_len - 1))
           for ((i=$var_start; i<=$var_end ; i ++)); do image="${image}/${arr[$i]}"; done
           image=${image:1}
-          tags="$image:latest,$image:$(date +'%m-%d_%H-%M-%S')"
+          tags="$image:dev,$image:$(date +'%m-%d_%H-%M-%S')"
           echo "original tags $tags"
           t="${{github.event.inputs.tags}}"
           if [[ "$t" ]] ; then
